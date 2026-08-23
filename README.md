@@ -1,79 +1,148 @@
-# Ultimate Writing · 全品类写作 Skill
+<div align="center">
 
-一个 Skill 通吃全品类中文写作：去AI味、文风定制、小说、论文、公众号、报告、文案、改写润色、自查。
+# Ultimate Writing · 终极写作
 
-融合 30+ 个 GitHub 顶级写作 Skill 的方法论，单入口 + 按需加载，不爆上下文。
+**一个 Skill，通吃全品类中文写作。**
 
-## 特性
+去 AI 味 · 文风复刻 · 小说网文 · 科研论文 · 公众号长文 · 报告总结 · 营销文案 · 改写润色 · 自查交付
 
-- **全品类覆盖**：公众号长文、议论文、报告总结、科研论文、技术科普、营销文案、短视频脚本、网文小说、经验贴
-- **三层去AI味**：表层（词汇/句式）+ 话语层（结构/开头/结尾/叙事方式）+ 认知层（句子长度方差、代词分布、hedge、情绪具体性），不只换词，连结构和底层特征一起改
-- **选题与标题方法论**：四个价值锚点、爆款选题公式、五类高打开率选题、六类标题公式
-- **女娲文风系统**：从样本提取 5 维风格画像（词汇/句法/段落/修辞/声音），复刻任意作者或品牌文风
-- **5 种文风 + 5 种声音画像**：文艺、商务、口语、学术 + 女娲自定义；直接/温和/权威/叙述/对话五种人设
-- **5 种改写模式**：重度去AI、高级润色、逻辑修复、节奏调整、去重去同质
-- **分级自检 + 量化质量门**：P0-P4 五级严重度，外加直接/节奏/可信/真诚/密度五维打分（低于 35/50 打回重写）
-- **来源评估与事实核查**：来源四级分级、交叉验证、事实/观点/宣传区分
-- **微信排版规范**：内联样式组件体系、十套主题配色、公众号粘贴不丢样式
-- **中文优先**：针对中文 AI 味（翻译腔、的的不休、互联网黑话、欧化长句、代词滥用）专门设计
-- **按需加载**：主入口约 8.5KB，每次只加载一个场景模块，单次最大加载约 45KB，不爆 64KB 限制
-- **工具脚本**：中文字数统计、AI痕迹扫描（含结构层检测）
+<img src="https://img.shields.io/badge/覆盖-全品类中文写作-blue" alt="覆盖">
+<img src="https://img.shields.io/badge/中文-优先-red" alt="中文优先">
+<img src="https://img.shields.io/badge/按需加载-不爆上下文-orange" alt="按需加载">
+<img src="https://img.shields.io/badge/三层去AI味-表层·话语层·认知层-green" alt="三层去AI味">
+<img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
 
-## 安装
+</div>
 
-### Claude Code
+---
+
+## 这是什么
+
+`ultimate-writing` 是一个**单入口、按需加载**的写作 Skill，把 30+ 个 GitHub 顶级写作方法论收敛进一个仓库。它解决一个具体问题：
+
+> AI 写出来的东西，"通顺，但没人味"——开头像模板，结尾像硬凑，读两行就知道是模型写的。
+
+这个 Skill 不是"调 prompt 让 AI 写得更好一点"，而是一套**成文约束 + 分层自检 + 工程脚本**，从写作前到交付后逐层把关，让文字第一次就写得像样。
+
+## 目录
+
+- [核心特性](#核心特性)
+- [核心方法论](#核心方法论)
+- [快速开始](#快速开始)
+- [使用示例](#使用示例)
+- [架构](#架构)
+- [工作流](#工作流)
+- [工具脚本](#工具脚本)
+- [常见问题](#常见问题)
+- [License](#license)
+
+## 核心特性
+
+| 能力 | 说明 |
+|---|---|
+| 🎭 **全品类覆盖** | 公众号长文、议论文、报告总结、科研论文、技术科普、营销文案、短视频脚本、网文小说、经验贴，9 大场景一套搞定 |
+| 🧼 **三层去AI味** | 表层（词汇/句式）+ 话语层（结构/叙事）+ 认知层（句子长度方差、代词、hedge、情绪具体性），不只换词，连底层特征一起改 |
+| 📌 **选题与标题方法论** | 四个价值锚点、爆款选题公式、五类高打开率选题、六类标题公式，从源头解决"写了没人看" |
+| 🗿 **女娲文风系统** | 从样本提取 5 维风格画像（词汇/句法/段落/修辞/声音），复刻任意作者或品牌文风 |
+| 🎨 **5 种文风 + 5 种声音** | 文艺 / 商务 / 口语 / 学术 + 女娲自定义；直接 / 温和 / 权威 / 叙述 / 对话五种人设 |
+| ✂️ **5 种改写模式** | 重度去AI、高级润色、逻辑修复、节奏调整、去重去同质化 |
+| ✅ **分级自检 + 量化质量门** | P0-P4 五级严重度，外加直接/节奏/可信/真诚/密度五维打分，低于 35/50 打回重写 |
+| 🔍 **来源评估与事实核查** | 来源四级分级、交叉验证、事实/观点/宣传区分，事实零容忍编造 |
+| 💅 **微信排版规范** | 内联样式组件体系、十套主题配色，公众号粘贴不丢样式 |
+| 🇨🇳 **中文优先** | 针对中文 AI 味（翻译腔、"的的不休"、互联网黑话、欧化长句、代词滥用）专门设计 |
+| 📦 **按需加载** | 主入口约 8.5KB，单次最大加载约 45KB，永远不爆 64KB 上下文限制 |
+| 🛠️ **工具脚本** | 中文字数统计、AI 痕迹扫描（含结构层检测） |
+
+## 核心方法论
+
+### 三层去AI味
+
+只换词不够。研究显示，即使把 AI 文章的所有禁用词换掉，仅靠话语结构特征（开头方式、结尾方式、是否留悬念、是否有具体人名数字）仍能以**超过 90%** 的准确率识别出 AI 写作。
+
+更进一步，2025-2026 年的检测研究把 AI 痕迹分成五类线索，其中**最底层、最难伪装**的是认知特征。所以本 Skill 分三层清理：
+
+```
+第一层 · 表层    词汇、短语、标点、句式
+                 删"值得注意的是""赋能""不是A而是B"……
+
+第二层 · 话语层   怎么开头、怎么结尾、怎么推进、留不留悬念
+                 修"结尾点题""人造闭环""氛围开头""无名泛指"……
+
+第三层 · 认知层   句子长度方差、代词分布、hedge 时机、情绪具体性
+                 改"机器节奏""我们滥用""该确定时含糊"……
+```
+
+**句子长度方差（Burstiness）** 是最可靠的机械信号——人类写作句子长短剧烈交替（CV 约 0.6-1.2），AI 写作句子长度高度均匀（CV 约 0.2-0.4）。这是唯一无法靠"换词"伪装、必须从结构层面重建的信号。
+
+### 减法优先
+
+80% 的 AI 味靠删就能解决。不编造"人类纹理"来假装真人——**宁可短，不可假**。
+
+### 保护作者声音
+
+改写时保留原文的具体细节、对话、个人经历、独特比喻。不把活的文字压成光滑的摘要。
+
+### 事实零容忍编造
+
+所有数字、日期、人名、引语必须有来源。宁可写"待核实"，不编。
+
+## 快速开始
+
+### 方式一：Claude Code
 
 ```bash
-# 克隆到 skills 目录
 git clone https://github.com/你的用户名/ultimate-writing.git ~/.claude/skills/ultimate-writing
 ```
 
-### Codex / 其他支持 SKILL.md 的 Agent
+### 方式二：Codex / 其他支持 SKILL.md 的 Agent
 
 ```bash
-# 复制到你的 skills 目录
 cp -r ultimate-writing ~/.codex/skills/
 ```
 
-### 手动安装
+### 方式三：手动安装
 
 1. 下载本仓库
 2. 将整个文件夹放入你的 Agent skills 目录
 3. 重启 Agent 或重新加载 skills
 
-## 使用
+> 💡 建议**用户级全局安装**（`~/.claude/skills/`），装一次，所有项目都能用。
 
-直接用自然语言告诉 Agent 你的写作需求即可：
+## 使用示例
 
-```
-帮我写一篇关于AI取代客服的公众号文章，3000字，口语化风格
+直接用自然语言说需求即可，Agent 会自动识别场景、加载对应模块。
 
-帮我把这段文字去AI味
+```text
+# 长文创作
+帮我写一篇关于 AI 取代客服的公众号文章，3000 字，口语化风格
 
+# 去 AI 味 / 改写
+帮我把这段文字去 AI 味（粘贴你的初稿）
+帮我润色这份 Q3 工作报告
+
+# 文风定制
 用文艺的文风写一篇关于老城区拆迁的散文
-
-帮我润色这份Q3工作报告
-
 模仿我之前文章的风格写一篇新的（粘贴你的样本）
 
-帮我写一篇短视频脚本，主题是时间管理，60秒
-
+# 其他场景
+帮我写一篇短视频脚本，主题是时间管理，60 秒
 帮我写小说第三章，前面的设定是……
+帮我写一篇考研上岸经验贴
 ```
-
-Agent 会自动识别需求，加载对应的场景模块和文风模块。
 
 ## 架构
 
 ```
 ultimate-writing/
-├── SKILL.md                    # 主入口+路由器（约8.5KB）
+├── SKILL.md                    # 主入口 + 路由器（约 8.5KB）
 ├── README.md
 ├── LICENSE
+│
 ├── core/                       # 内核层（每次必加载）
-│   ├── core-humanize.md        # 去AI味内核（表层+话语层+中文+人类纹理）
-│   ├── core-rules.md           # 写作铁律
-│   └── core-self-check.md      # 分级自检（P0-P4）
+│   ├── core-humanize.md        # 三层去AI味内核（表层+话语层+认知层）
+│   ├── core-rules.md           # 写作铁律（38条）
+│   └── core-self-check.md      # 分级自检 + 量化质量门
+│
 ├── mode/                       # 场景层（按需加载一个）
 │   ├── mode-wechat.md          # 公众号长文
 │   ├── mode-essay.md           # 议论文/感悟文
@@ -84,18 +153,21 @@ ultimate-writing/
 │   ├── mode-video.md           # 短视频脚本
 │   ├── mode-novel.md           # 网文小说
 │   └── mode-experience.md      # 经验贴
+│
 ├── style/                      # 文风层（可选叠加一个）
 │   ├── style-nuwa.md           # 女娲风格提取与复刻
 │   ├── style-literary.md       # 文艺高级风
 │   ├── style-business.md       # 商务稳重风
 │   ├── style-oral.md           # 极致口语风
 │   └── style-academic.md       # 学术严谨风
+│
 ├── revise/                     # 改写层（按需加载一个）
 │   ├── revise-deai.md          # 重度去AI重构
 │   ├── revise-polish.md        # 高级润色
 │   ├── revise-logic.md         # 逻辑修复
 │   ├── revise-rhythm.md        # 节奏调整
 │   └── revise-dedup.md         # 去重去同质
+│
 ├── references/                 # 参考资料（按需查阅）
 │   ├── ref-banned-words.md     # 禁用词总表（中英）
 │   ├── ref-before-after.md     # 前后对照案例
@@ -104,95 +176,93 @@ ultimate-writing/
 │   ├── ref-voice-profiles.md   # 声音画像（5种人设）
 │   ├── ref-wechat-html.md      # 微信排版规范（内联样式）
 │   └── ref-novel-craft.md      # 小说工艺细节
+│
 ├── templates/                  # 结构模板（按需使用）
 │   ├── tpl-wechat.md
 │   ├── tpl-report.md
 │   ├── tpl-paper.md
 │   ├── tpl-novel.md
 │   └── tpl-video.md
+│
 └── scripts/                    # 工具脚本
     ├── word_count.py           # 中文字数统计
-    └── scan_ai.py              # AI痕迹扫描
+    └── scan_ai.py              # AI痕迹扫描（含结构层检测）
 ```
 
 ## 工作流
 
-1. **识别需求**：判断写作类型、字数、文风、立场
-2. **加载内核**：去AI味规则 + 写作铁律 + 自检体系
-3. **加载场景**：只加载对应的一个 mode 文件
-4. **叠加文风**：可选加载一个 style 文件
-5. **加载改写模块**：改写任务加载对应 revise 文件
-6. **写作**：按规范写作
-7. **自检**：P0-P4 分级自检，不通过就改
-8. **交付**：成品 + 自检结果
+写作全程八步，从需求识别到交付自检：
+
+```
+① 识别需求      判断写作类型、字数、文风、立场，缺关键参数才追问
+② 加载内核      去AI味规则 + 写作铁律 + 自检体系（每次必做）
+③ 加载场景      只加载对应的一个 mode 文件，禁止多文件混用
+④ 叠加文风      可选，最多加载一个 style 文件
+⑤ 加载改写      改写/润色任务加载对应 revise 文件
+⑥ 参考模板      需要大纲读 templates/，查禁用词读 references/
+⑦ 写作          按模块规范写作，长文分章推进
+⑧ 自检          分级自检 + 五维质量门，不通过就改，改到通过再交付
+```
 
 ## 工具脚本
 
-### 字数统计
+### 字数统计 `word_count.py`
+
+统计口径与 Word/WPS 一致（中文字符 + 英文单词 + 数字串）。
 
 ```bash
 python3 scripts/word_count.py article.md --min 2000 --max 5000
 ```
 
-统计口径：中文字符 + 英文单词 + 数字串，与 Word/WPS 一致。
+### AI 痕迹扫描 `scan_ai.py`
 
-### AI痕迹扫描
+扫描四类问题：
+
+| 类别 | 内容 | 处理 |
+|---|---|---|
+| ❌ **严重** | AI 身份声明、拒答话术、客服式结尾 | 命中即不合格 |
+| ⚠️ **警告** | 模板化套话、黑话、句式模式 | 建议修改 |
+| ⚠️ **占位符** | TODO、待补充、example.com | 建议清理 |
+| 📊 **结构层** | 句子长度方差、无名泛指、"我们"滥用、hedge 密度 | 认知特征检测 |
 
 ```bash
 python3 scripts/scan_ai.py article.md
 ```
 
-扫描 AI 身份声明（严重）、模板化套话（警告）、占位符残留（警告），以及结构层特征（句子长度方差、无名泛指、代词"我们"滥用、hedge 密度）。
+扫描器会直接算出 **burstiness（句子长度方差）** 分数——这是区分人机写作最可靠的机械信号，低于阈值就是"机器节奏"。
 
-## 设计理念
+## 常见问题
 
-### 三层去AI味
+<details>
+<summary><strong>Q：装几个 Skill 合适？会互相打架吗？</strong></summary>
 
-只换词不够。研究显示，即使把AI文章的所有禁用词换掉，仅靠话语结构特征（开头方式、结尾方式、是否留悬念、是否有具体人名数字）仍能以超过90%的准确率识别出AI写作。更进一步，2025-2026 年的检测研究把 AI 痕迹分成五类线索，其中最底层、最难伪装的是认知特征：句子长度方差（burstiness）、代词分布、hedge 时机、情绪具体性。
+反 AI 味 + 一个格式工具 + 有需要再配一个研究向的就够了。装太多，触发描述会互相冲突，你根本预测不了哪条规则会生效。这个 Skill 本身就是"多合一"，一个顶多个。
+</details>
 
-所以本 Skill 分三层清理：
+<details>
+<summary><strong>Q：去 AI 味会不会让文章变成营销号腔？</strong></summary>
 
-1. **表层**：词汇、句式、标点。
-2. **话语层**：开头、结尾、推进方式、叙事结构。
-3. **认知层**：burstiness、代词、"我们"滥用、hedge 悖论、情绪具体性缺失。
+不会，而且这是明确禁止的。去 AI 味的目标是"像一个真人写的好文章"，不是"家人们谁懂啊"。内核里专门有一条：从 AI 腔改成营销号腔，是另一种假。
+</details>
 
-三层全过，才真正读起来像人。
+<details>
+<summary><strong>Q：学术论文也要去 AI 味吗？</strong></summary>
 
-### 减法优先
+不强行去。学术文体本身需要正式、精确、结构化，被动语态和 hedge 是规范不是 AI 味。但套话和空话（"随着……的发展""具有重要的理论和实践意义"）仍然要删。相关规则见 `style/style-academic.md`。
+</details>
 
-80%的AI味靠删就能解决。不编造"人类纹理"来假装真人——宁可短，不可假。
+<details>
+<summary><strong>Q：去 AI 味会编造细节来"假装是人"吗？</strong></summary>
 
-### 保护作者声音
+绝不。核心铁律是"减法优先"——80% 的 AI 味靠删就能解决，加法必须有真实依据。不编造人名、数据、故事。
+</details>
 
-改写时保留原文的具体细节、对话、个人经历、独特比喻。不把活的文字压成光滑的摘要。
+<details>
+<summary><strong>Q：能不能模仿某个具体作者的风格？</strong></summary>
 
-### 事实零容忍编造
-
-所有数字、日期、人名、引语必须有来源。宁可写"待核实"，不编。
-
-## 致谢
-
-本 Skill 的方法论融合了以下开源项目的精华：
-
-- [blader/humanizer](https://github.com/blader/humanizer)
-- [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing)
-- [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop)
-- [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)
-- [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)
-- [avectats7/anti-ai-writing](https://github.com/avectats7/anti-ai-writing)
-- [lguz/humanize-writing-skill](https://github.com/lguz/humanize-writing-skill)
-- [woderfulmagic/humanized-chinese-writing-polisher](https://github.com/woderfulmagic/humanized-chinese-writing-polisher)
-- [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill)
-- [KKKKhazix/Khazix-Skills](https://github.com/KKKKhazix/Khazix-Skills)
-- [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)
-- [kaiak-io/claude-code-skills](https://github.com/kaiak-io/claude-code-skills)
-- [wgwtest/novel-writing](https://github.com/wgwtest/novel-writing)
-- [mou-fang/fictionist-skill](https://github.com/mou-fang/fictionist-skill)
-- [imerzzhu/ai-novel-writing-skills](https://github.com/imerzzhu/ai-novel-writing-skills)
-- [li-debug-eng/write-compliant-fiction-serial](https://github.com/li-debug-eng/write-compliant-fiction-serial)
-- [worldwonderer/oh-story-claudecode](https://github.com/worldwonderer/oh-story-claudecode)
-- [lianjx2025/humanize](https://github.com/lianjx2025/humanize)
+可以，走女娲文风系统（`style/style-nuwa.md`），从你提供的样本提取 5 维风格画像再复刻。但只学"怎么写"，不抄袭"写什么"；在世作者风格仅供学习，不用于冒充。
+</details>
 
 ## License
 
-MIT
+本项目基于 [MIT](./LICENSE) 协议开源，可自由使用、修改、分发。
