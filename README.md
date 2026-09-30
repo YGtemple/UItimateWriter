@@ -1,6 +1,6 @@
 # UItimateWriter · 全品类中文写作 Skill
 
-> 一句话简介：单入口、按需加载的全品类中文写作系统——三层去AI味 + 九大写作场景 + 文风复刻 + 自检脚本，把"怎么写好"从玄学变成可执行的工程。
+> 一句话简介：全品类中文写作系统：去 AI 味、九大场景、文风复刻与自检
 
 ## 一、项目概述与定位
 
@@ -58,7 +58,7 @@ UItimateWriter/
     ├── mode/                        # 场景层（按需只加载一个）
     │   ├── mode-wechat.md           # 公众号长文
     │   ├── mode-essay.md            # 议论文/感悟文
-    │   ├── mode-report.md            # 报告/总结
+    │   ├── mode-report.md           # 报告/总结
     │   ├── mode-paper.md            # 科研论文（IMRaD）
     │   ├── mode-tech.md             # 技术科普
     │   ├── mode-copy.md             # 营销/种草文案
@@ -82,7 +82,7 @@ UItimateWriter/
     │   ├── ref-before-after.md      # 去AI味/润色/节奏前后对照案例
     │   ├── ref-title-topic.md       # 选题与标题方法论
     │   ├── ref-source-eval.md       # 来源评估与事实核查
-    │   ├── ref-voice-profiles.md     # 5 种声音画像
+    │   ├── ref-voice-profiles.md    # 5 种声音画像
     │   ├── ref-wechat-html.md       # 微信内联 HTML 排版规范
     │   └── ref-novel-craft.md       # 小说工艺（场景/人物/视角/节奏/反转）
     ├── templates/                    # 结构模板（按需使用）
